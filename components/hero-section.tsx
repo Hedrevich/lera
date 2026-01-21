@@ -1,39 +1,40 @@
+"use client";
+
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 
 export function HeroSection() {
+  const handleDownloadCV = () => {
+    const link = document.createElement("a");
+    link.href = "/Valeryia_Melets_CV.pdf";
+    link.download = "Valeryia_Melets_CV.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
-    <section className="relative min-h-[80vh] px-6 md:px-12 lg:px-20 pt-8">
-      {/* Background decorative lines */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+    <section className="relative min-h-[80vh] px-6 md:px-12 lg:px-20 pt-8 overflow-hidden">
+      {/* Background decorative arcs (Figma-like spiral/waves) */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <svg
-          className="absolute top-0 right-0 w-[600px] h-[400px] opacity-20"
-          viewBox="0 0 600 400"
+          className="absolute left-0 top-1/2 -translate-y-1/2 w-[1200px] h-[700px] opacity-30"
+          viewBox="0 0 1200 700"
+          fill="none"
         >
-          <path
-            d="M300,0 Q600,100 500,400"
-            stroke="#4f4f4f"
-            strokeWidth="1"
-            fill="none"
-          />
-          <path
-            d="M320,0 Q620,120 520,400"
-            stroke="#4f4f4f"
-            strokeWidth="1"
-            fill="none"
-          />
-          <path
-            d="M340,0 Q640,140 540,400"
-            stroke="#4f4f4f"
-            strokeWidth="1"
-            fill="none"
-          />
-          <path
-            d="M360,0 Q660,160 560,400"
-            stroke="#4f4f4f"
-            strokeWidth="1"
-            fill="none"
-          />
+          <g stroke="#4f4f4f" strokeWidth="2" opacity="0.65">
+            {/* Big sweeping arcs */}
+            <path d="M-200 350 A 980 980 0 0 1 1400 350" />
+            <path d="M-170 350 A 900 900 0 0 1 1370 350" opacity="0.9" />
+            <path d="M-140 350 A 820 820 0 0 1 1340 350" opacity="0.85" />
+            <path d="M-110 350 A 740 740 0 0 1 1310 350" opacity="0.8" />
+            <path d="M-80 350 A 660 660 0 0 1 1280 350" opacity="0.75" />
+            <path d="M-50 350 A 580 580 0 0 1 1250 350" opacity="0.7" />
+            <path d="M-20 350 A 500 500 0 0 1 1220 350" opacity="0.65" />
+            <path d="M10 350 A 420 420 0 0 1 1190 350" opacity="0.6" />
+            <path d="M40 350 A 340 340 0 0 1 1160 350" opacity="0.55" />
+            <path d="M70 350 A 260 260 0 0 1 1130 350" opacity="0.5" />
+          </g>
         </svg>
       </div>
 
@@ -43,9 +44,15 @@ export function HeroSection() {
           <span className="font-serif">V</span>M
         </div>
         <div className="flex items-center gap-3">
-          <span className="text-[#ffffff] text-sm underline underline-offset-4 cursor-pointer hover:text-[#f2c94c] transition-colors">
+          <a
+            href="https://www.linkedin.com/in/valeryia-melets-60ab47223/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#ffffff] text-sm underline underline-offset-4 hover:text-[#f2c94c] transition-colors"
+            aria-label="Let's Talk on LinkedIn"
+          >
             {"Let's Talk"}
-          </span>
+          </a>
           <svg width="20" height="20" viewBox="0 0 24 24" fill="#ff4a3b">
             <path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z" />
           </svg>
@@ -58,15 +65,12 @@ export function HeroSection() {
           {/* Left Column */}
           <div className="relative z-10">
             <h1 className="font-serif text-[#ffffff] text-6xl md:text-7xl lg:text-8xl italic">
-              Hello,
-              <span className="inline-block ml-2">
-                <ArrowUpRight className="w-6 h-6 md:w-8 md:h-8 text-[#ffffff] inline -mt-8" />
-              </span>
+              Hello, I&apos;m <br /> Valeryia.
             </h1>
 
             <p className="text-[#ffffff] text-sm md:text-base mt-6 max-w-xs leading-relaxed">
               I design user-centered digital products and websites from idea to
-              final delivery. <ArrowUpRight className="w-3 h-3 inline" />
+              final delivery.
             </p>
             <p className="text-[#ff4a3b] text-sm md:text-base font-medium mt-1">
               Living in Bulgaria
@@ -75,7 +79,10 @@ export function HeroSection() {
             {/* Decorative line under text */}
             <div className="w-48 h-[2px] bg-gradient-to-r from-[#ff4a3b] to-transparent mt-2" />
 
-            <button className="mt-8 px-6 py-3 border border-[#ffffff]/30 rounded-full text-[#ffffff] text-sm hover:bg-[#ffffff]/10 transition-colors flex items-center gap-2 group">
+            <button
+              onClick={handleDownloadCV}
+              className="mt-8 px-6 py-3 border border-[#ffffff]/30 rounded-full text-[#ffffff] text-sm hover:bg-[#ffffff]/10 transition-colors flex items-center gap-2 group"
+            >
               Download CV
               <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </button>

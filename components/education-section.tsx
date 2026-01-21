@@ -23,19 +23,19 @@ export function EducationSection() {
         <div className="flex flex-wrap justify-center gap-6">
           {/* Yandex Practicum */}
           <div className="flex gap-4">
-            <div className="w-16 h-20 bg-[#50b0a1] rounded-lg flex items-center justify-center shrink-0">
+            <div className="w-16 h-20 bg-[#ff4a3b] rounded-lg flex items-center justify-center shrink-0">
               <Calendar className="w-8 h-8 text-white" />
             </div>
             <div>
               <p className="text-[#979797] text-sm mb-1">2020 - 2021</p>
-              <h3 className="font-serif text-lg text-[#f2c94c]">Yandex Practicum</h3>
+              <h3 className="font-serif text-lg text-white">Yandex Practicum</h3>
               <p className="text-[#828282] text-sm">Remote</p>
             </div>
           </div>
 
-          {/* BSLU */}
+          {/* BSEU */}
           <div className="flex gap-4">
-            <div className="w-16 h-20 bg-[#50b0a1] rounded-lg flex items-center justify-center shrink-0">
+            <div className="w-16 h-20 bg-[#ff4a3b] rounded-lg flex items-center justify-center shrink-0">
               <Calendar className="w-8 h-8 text-white" />
             </div>
             <div>

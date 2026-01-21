@@ -23,8 +23,8 @@ export function WorkHistorySection() {
         <div className="grid md:grid-cols-2 gap-6">
           {/* Card 1 */}
           <div className="flex gap-4">
-            <div className="w-16 h-20 bg-[#f2c94c] rounded-lg flex items-center justify-center shrink-0">
-              <Calendar className="w-8 h-8 text-[#1f1f1f]" />
+            <div className="w-16 h-20 bg-[#ff4a3b] rounded-lg flex items-center justify-center shrink-0">
+              <Calendar className="w-8 h-8 text-white" />
             </div>
             <div>
               <p className="text-[#979797] text-sm mb-1">2025 - 2026</p>

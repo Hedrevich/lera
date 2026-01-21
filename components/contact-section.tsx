@@ -52,7 +52,7 @@ export function ContactSection() {
               </div>
               <div>
                 <p className="text-[#ff4a3b] text-sm">Send Email</p>
-                <p className="text-white font-serif text-lg">valeryiamelets@gmail.com</p>
+                <p className="text-white font-serif text-lg">valeryia.melets@gmail.com</p>
               </div>
             </div>
           </div>

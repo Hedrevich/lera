@@ -6,49 +6,42 @@ const services = [
     title: "Product Design",
     description: "Design and launch websites and products from scratch with clear UX flows and strong UI",
     skills: ["UX/UI1", "IA", "Prototyping"],
-    highlighted: false,
   },
   {
     icon: Megaphone,
     title: "Sales Materials",
     description: "Create pitch decks, commercial proposals, and marketing visuals",
     skills: ["Visual", "Presentation", "IA"],
-    highlighted: true,
   },
   {
     icon: Sparkles,
     title: "Marketing Design",
     description: "Design interactive mechanics, social visuals, emails, and ads",
     skills: ["Design systems", "Presentation", "Copy"],
-    highlighted: false,
   },
   {
     icon: Cpu,
     title: "AI Driven Design",
     description: "Use AI to speed up production and generate visual concepts",
     skills: ["Midjourney", "ChatGPT", "AI workflows"],
-    highlighted: false,
   },
   {
     icon: BookOpen,
     title: "Print Production",
     description: "Full-cycle book production: editing, cover, layout, prepress",
     skills: ["Editorial design", "Typography", "Layout"],
-    highlighted: false,
   },
   {
     icon: Search,
     title: "UX Review",
     description: "Review projects, provide structured feedback, mentor designers",
     skills: ["UX audit", "Mentoring", "Communication"],
-    highlighted: false,
   },
   {
     icon: FolderKanban,
     title: "Project Ownership",
     description: "Lead projects from idea to final delivery",
     skills: ["Project ownership", "Stakeholder management"],
-    highlighted: false,
   },
 ]
 
@@ -80,7 +73,7 @@ export function ServicesSection() {
                 {/* Icon & Title */}
                 <div className="flex items-center gap-3 md:w-48 shrink-0">
                   <service.icon className="w-5 h-5 text-[#ff4a3b]" />
-                  <h3 className={`font-serif text-lg ${service.highlighted ? "text-[#ff4a3b]" : "text-white"}`}>
+                  <h3 className="font-serif text-lg text-white">
                     {service.title}
                   </h3>
                 </div>
@@ -100,9 +93,7 @@ export function ServicesSection() {
 
                 {/* Arrow Button */}
                 <button
-                  className={`w-10 h-10 rounded-full flex items-center justify-center shrink-0 transition-colors ${
-                    service.highlighted ? "bg-[#ff4a3b] text-white" : "bg-[#333333] text-white hover:bg-[#4f4f4f]"
-                  }`}
+                  className="w-10 h-10 rounded-full flex items-center justify-center shrink-0 transition-colors bg-[#333333] text-white hover:bg-[#4f4f4f]"
                 >
                   <ArrowUpRight className="w-5 h-5" />
                 </button>
